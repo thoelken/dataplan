@@ -9,7 +9,8 @@
 
 ## General
   * ics reminder export does not work - even neccessary ?
-  * menu button blue in minipage version
+  * menu button in minipage version still blue
+  * does not work in Brave Browser - what about others?
 
 
 
@@ -42,7 +43,7 @@
   * MARC 21 enters nothing
 
 ### 5. Do you intend to use data visualization in your project?
-  * Yes, I visualize my data. Does nothing. - What's the point of this anyway?
+  * ~~Yes, I visualize my data. Does nothing. - What's the point of this anyway?~~
 
 
 
@@ -75,7 +76,7 @@
   * MARC 21 enters nothing
 
 ### 5. Do you intend to use data visualization in your project?
-  * Yes, I visualize my data. Does nothing. - What's the point of this anyway?
+  * ~~Yes, I visualize my data. Does nothing. - What's the point of this anyway?~~
 
 
 

@@ -97,17 +97,17 @@
 						<div class="btn-group d-md-none g-0 dropdown col-auto d-flex align-items-center" >
 							<button type="button" class="btn rounded-0 border-0 g-0 btn-nav " data-bs-toggle="dropdown" aria-expanded="false" id="menu">
 								Menu &nbsp;
-								<span style="display: inline-block; color: rgb(79, 179, 217); letter-spacing: 2px; font-size: 1em; transform: scaleX(2); transform-origin: 1 0;"> ∨ </span>
+								<span style="display: inline-block; color: rgb(255, 255, 255); background-color: rgb(250, 178, 11); letter-spacing: 2px; font-size: 1em; transform: scaleX(2); transform-origin: 1 0;"> ∨ </span>
 							</button>
 							<ul class="dropdown-menu">
 							<li>
-									<button id="detailed_dmp" class="dropdown-item" onclick='load_dmp(reload_answers,name="dmp1")'>Horizon Europe DMP</button>
+									<button id="detailed_dmp" class="dropdown-item" onclick='load_dmp(reload_answers,name="dmp1")'>Horizon 2020 DMP</button>
 								</li>
                                 <li>
 									<button id="detailed_dmp" class="dropdown-item" onclick='load_dmp(reload_answers,name="horizon_europe")'>Horizon Europe DMP</button>
 								</li>
 								<li>
-									<button id="detailed_dfg-dmp" class="dropdown-item" onclick='load_dmp(reload_answers,name="dfg-dmp")'>German (DFG) DMP</button>
+									<button id="detailed_dfg-dmp" class="dropdown-item" onclick='load_dmp(reload_answers,name="dfg-dmp")'>DFG DMP</button>
 								</li>
 								<li>
 									<button id="guide_save" class="dropdown-item" onclick='load_dmp(reload_answers,name="practical-guide")'>Practice Guide</button>
@@ -1029,12 +1029,14 @@
 										</label>
 									</div>
 								</div>
-								
+
+<!-- No we do not								
 								<h2 id="scrollspyHeading5">5. Do you intend to use data visualization in your project?</h2>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input checkbox_3" type="checkbox" id="check_vvisualization"  >
                                     <label class="form-check-label" for="check_vvisualization">Yes, I visualize my data.</label>
                                 </div>
+-->                                
 							</div>
 							
 							<input class="btn btn-primary btn-sm d-none" type="button" id="check_box3" value="submit data type" data-checkbox="checkbox_3" onclick="get_option(this)" >
