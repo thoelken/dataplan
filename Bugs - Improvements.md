@@ -2,7 +2,7 @@
 
   * More flexible Data Volume entry
   * Possibility to add a specific date
-  * Add Data Officer Contact Info / as part of Appendix ?
+  * ~~Add Data Officer Contact Info~~
   * Bulletpoint 4 (could include the MIxS/GSC standards or different ENA checklists)
 
 
@@ -19,6 +19,7 @@
   * no page breaks - do we need them?
 
 ### 1.3 Other DMP Metadata
+  * User Name not entered anywhere. Who is the user anyway? The creator? The PI?
   * DMP Version not entered - on purpose?
 
 ### 1.4 Please select from the following options
@@ -52,6 +53,9 @@
   * empty box left where wordcloud used to be
   * Action Number/Acronym/Title all the same text
 
+### 1.3 Other DMP Metadata
+  * User Name not entered anywhere. Who is the user anyway? The creator? The PI?
+
 ### 1.4 Please select from the following options
   * Yes! I will use.. introduces weird page formatting
   * ENA enters nothing
@@ -81,3 +85,6 @@
   * weird page breaks - do we need them?
   * empty box left where wordcloud used to be
   * Action Number/Acronym/Title all the same text
+
+### 1.3 Other DMP Metadata
+  * User Name not entered anywhere. Who is the user anyway? The creator? The PI?

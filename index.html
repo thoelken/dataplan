@@ -612,6 +612,25 @@
 								/>
 							</form>
 							
+
+							<form class="" style="margin-left: 0px;" id="form_docontact">
+								<label for="input_docontact"><h4>Data Officer Contact Details:</h4></label>
+								<input
+									style="width: 26vw;"
+									class=""
+									onfocusin="this.select();"
+									onchange="onchange_replace(this);"
+									type="text"
+									id="input_docontact"
+									name="$_docontact"
+									placeholder="data officer contact details (Tel. No. / eMail)"
+									onkeydown="  if (event.keyCode == 13){event.preventDefault(); event.stopPropagation();this.parentElement.nextElementSibling.children[1].focus();return false;}"
+									onfocus='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1); elem1.forEach(e => e.classList.add("border-highlight")); set_scrollbar_marker( scroll_marker,elem1 )'
+									onfocusout='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1);elem1.forEach(e => e.classList.remove("border-highlight")); document.querySelectorAll("[name=\"scroll-bar-span\"]").forEach(e => {e.remove()})'
+								/>
+							</form>
+
+
 							<form class="" style="margin-left: 0px;" id="form_dmpversion">
 								<label for="input_dmpversion"><h4>DMP version:</h4></label>
 								<input
@@ -1631,7 +1650,7 @@
                         </p>
                         <p class="c0"><span class="c1">The cost born by the $_PROJECT are covered by the project funding. Pre-existing structures #if$_N4MPLAN such as structures, tools, and knowledge laid down in the NFDI4Microbiota consortium#endif$_N4MPLAN will also be used.</span></p>
                         <p class="c10"><span class="c3">Who will be responsible for data management in your project?</span></p>
-                        <p class="c0"><span class="c1">The responsible person will be the data officer $_DATAOFFICER of the $_PROJECT.</span></p>
+                        <p class="c0"><span class="c1">The responsible person will be the data officer $_DATAOFFICER ($_DOCONTACT) of the $_PROJECT.</span></p>
                         <p class="c10"><span class="c3">Are the resources for long term preservation discussed (costs and potential value, who decides and how/what data will be kept and for how long)?</span></p>
                         <p class="c0">
                             <span class="c1">
@@ -2223,7 +2242,7 @@
                         </p>
                         <p class="c0"><span class="c1">The cost born by the $_PROJECT are covered by the project funding. Pre-existing structures #if$_N4MPLAN such as structures, tools, and knowledge laid down in the NFDI4Microbiota consortium#endif$_N4MPLAN will also be used.</span></p>
                         <p class="c10"><span class="c3">Who will be responsible for data management in your project?</span></p>
-                        <p class="c0"><span class="c1">The responsible person will be $_DATAOFFICER of the $_PROJECT.</span></p>
+                        <p class="c0"><span class="c1">The responsible person will be $_DATAOFFICER ($_DOCONTACT) of the $_PROJECT.</span></p>
                         <p class="c10"><span class="c3">How will long term preservation be ensured? Discuss the necessary resources to accomplish this (costs and potential value, who decides and how, what data will be kept and for how long)?</span></p>
                         <p class="c0">
                             <span class="c1">
@@ -2758,7 +2777,7 @@
                                 <span class="c3">6.1&nbsp;&nbsp;&nbsp;&nbsp;Who is responsible for adequate handling of the research data (description of roles and responsibilities within the project)? </span>
                             </h3>
                             <p class="c0">
-                                <span class="c1">The responsible person for adequate handling of the research data will be $_DATAOFFICER as data Officer.</span>
+                                <span class="c1">The responsible person for adequate handling of the research data will be $_DATAOFFICER ($_DOCONTACT) as data Officer.</span>
 								<span class="c1">The data officer decides on the preservation of data not submitted to end-point repositories after the end of the
                                 project. This will be in line with EU institute policies, and data sharing based on EU and international standards.</span>
                             </p>
@@ -5315,7 +5334,7 @@
                             <p class="c0"><span class="c1">ID Prim&auml;rforscher/Wissenschaftler: $_USERNAME</span></p>
                             <p class="c0"><span class="c1">Kontaktperson Datenmanagement: $_DATAOFFICER</span></p>
                             <p class="c0"><span class="c1">ID Kontaktperson Datenmanagement: </span></p>
-                            <p class="c0"><span class="c1">Kontakt: $_EMAIL</span></p>
+                            <p class="c0"><span class="c1">Kontakt: $_DOCONTACT</span></p>
                             <p class="c0"><span class="c1">Projektbeschreibung: </span></p>
                             <p class="c0 c2"><span class="c1"></span></p>
                             <p class="c0"><span class="c1">Erstellungsdatum: </span></p>
