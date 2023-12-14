@@ -519,6 +519,29 @@
 								</div>
 							</form>	
 
+<!-- Funding No. Checkbox -->
+							<form class="" style="margin-left: 0px;" id="form_fundingno">
+								    <h3>Does your project have a cool acronym?</h3>
+									<div class="form-data_type form-check">
+									<input class="form-check-input checkbox_3" type="checkbox" value="10" id="check_fundingno" />
+									<label class="form-check-label" for="check_fundingno">
+									
+									<input
+										style="width: 24vw;"
+										type="text"
+										class="col-auto"
+										id="input_fundingno"
+										onfocusin="this.select();"
+										onchange="onchange_replace(this);"
+										name="$_FUNDINGNO"
+										onchange= ' saved_a["replace"]["$_FUNDINGNO"]= this.value '
+										placeholder="Please enter your Funding No. if avialable"
+										onkeydown="if (event.keyCode == 13){event.preventDefault(); event.stopPropagation();this.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.children[0].focus();return false;}"
+										/>
+									</label>
+								</div>
+							</form>
+
 							<form id="form_studyobject">
 								<label for="input_studyobject">
 									<h3>
@@ -1309,7 +1332,7 @@
 							<table  >
 								<tr>
 									<td><h3>Funding No.: </h3></td>
-									<td><h3>  $_PROJECT</h3></td>
+									<td><h3>  $_FUNDINGNO</h3></td>
 								</tr>
 								<tr>
 									<td><h3>Project Acronym:</h3></td>
@@ -1783,7 +1806,7 @@
 							<table>
 								<tbody><tr>
 									<td><h3>Funding No.: </h3></td>
-									<td><h3>  $_PROJECT</h3></td>
+									<td><h3>  $_FUNDINGNO</h3></td>
 								</tr>
 								<tr>
 									<td><h3>Project Acronym:</h3></td>
@@ -5503,6 +5526,7 @@
 			    "replace": {
 			        "$_PROJECT": "Example Project",
 			        "$_PROACRONYM": "Cool Acronym",
+			        "$_FUNDINGNO": "Please enter your Funding No if available",
 			        "$_STUDYOBJECT": "Example Topic",
 			        "$_PROJECTAIM": "Example Aim",
 					"$_DMPVERSION": "0.0",
@@ -5675,6 +5699,7 @@
 			        "replace": {
 			        "$_PROJECT": "Example Project",
 			        "$_PROACRONYM": "Cool Acronym",
+			        "$_FUNDINGNO": "Please enter your Funding No if available",
 			        "$_STUDYOBJECT": "Example Topic",
 			        "$_PROJECTAIM": "Example Aim",
 					"$_DMPVERSION": "1.0",
