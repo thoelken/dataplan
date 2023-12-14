@@ -458,7 +458,7 @@
 
 							<form class="" style="margin-left: 0px;" id="form_project">
 								<label for="input_project">
-                                    <h3>What is the project name or acronym?</h3>
+                                    <h3>What is the projects name?</h3>
 								</label>
 								<input
 									style="width: 26vw;"
@@ -470,6 +470,25 @@
 									id="input_project"
 									name="$_PROJECT"
 									placeholder="the project name"
+									onkeydown=" if (event.keyCode == 13){event.preventDefault(); event.stopPropagation();this.parentElement.nextElementSibling.children[1].focus();return false;}"
+									onfocus='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1); elem1.forEach(e => e.classList.add("border-highlight")); set_scrollbar_marker( scroll_marker,elem1 )'
+									onfocusout='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1);elem1.forEach(e => e.classList.remove("border-highlight")); document.querySelectorAll("[name=\"scroll-bar-span\"]").forEach(e => {e.remove()})'
+								/>
+							</form>
+							<form class="" style="margin-left: 0px;" id="form_proacronym">
+								<label for="input_proacronym">
+                                    <h3>Does your project have a cool acronym?</h3>
+								</label>
+								<input
+									style="width: 26vw;"
+									class="col-auto"
+									type="text"
+									onfocusin="this.select();"
+									onchange="onchange_replace(this);"
+									
+									id="input_proacronym"
+									name="$_PROACRONYM"
+									placeholder="Cool Acronym"
 									onkeydown=" if (event.keyCode == 13){event.preventDefault(); event.stopPropagation();this.parentElement.nextElementSibling.children[1].focus();return false;}"
 									onfocus='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1); elem1.forEach(e => e.classList.add("border-highlight")); set_scrollbar_marker( scroll_marker,elem1 )'
 									onfocusout='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1);elem1.forEach(e => e.classList.remove("border-highlight")); document.querySelectorAll("[name=\"scroll-bar-span\"]").forEach(e => {e.remove()})'
@@ -1270,12 +1289,7 @@
 								</tr>
 								<tr>
 									<td><h3>Action Acronym:</h3></td>
-									<td><h3>  $_PROJECT</h3></td>
-								</tr>
-								<tr>
-									<td><h3>Action Title:</h3></td>
-									<td> <h3>  $_PROJECT</h3></td>
-					
+									<td><h3>  $_PROACRONYM</h3></td>
 								</tr>
 								<tr>
 									<td><h3>Date:</h3></td>
@@ -1750,12 +1764,7 @@
 								</tr>
 								<tr>
 									<td><h3>Action Acronym:</h3></td>
-									<td><h3>  $_PROJECT</h3></td>
-								</tr>
-								<tr>
-									<td><h3>Action Title:</h3></td>
-									<td> <h3>  $_PROJECT</h3></td>
-					
+									<td><h3>  $_PROACRONYM</h3></td>
 								</tr>
 								<tr>
 									<td><h3>Date:</h3></td>
@@ -5470,6 +5479,7 @@
 			            },
 			    "replace": {
 			        "$_PROJECT": "Example Project",
+			        "$_PROACRONYM": "Cool Acronym",
 			        "$_STUDYOBJECT": "Example Topic",
 			        "$_PROJECTAIM": "Example Aim",
 					"$_DMPVERSION": "0.0",
@@ -5641,6 +5651,7 @@
 			            },
 			        "replace": {
 			        "$_PROJECT": "Example Project",
+			        "$_PROACRONYM": "Cool Acronym",
 			        "$_STUDYOBJECT": "Example Topic",
 			        "$_PROJECTAIM": "Example Aim",
 					"$_DMPVERSION": "1.0",
@@ -5654,7 +5665,7 @@
 			        "$_proprietary": "Proprietary Software",
 			        "$_RAWDATA": "???",
 			        "$_DERIVEDDATA": "???",
-					"$_OSTANDARDINPUT": "Other standards You also plan to adhere to."
+					"$_OSTANDARDINPUT": "Please enter a short description of the other standards here."
 
 <!--Preselection upon start-->			        
 			        },
