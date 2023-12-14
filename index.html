@@ -475,7 +475,8 @@
 									onfocusout='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1);elem1.forEach(e => e.classList.remove("border-highlight")); document.querySelectorAll("[name=\"scroll-bar-span\"]").forEach(e => {e.remove()})'
 								/>
 							</form>
-							<form class="" style="margin-left: 0px;" id="form_proacronym">
+<!-- Acronym Entry Option no Checkbox
+								<form class="" style="margin-left: 0px;" id="form_proacronym">
 								<label for="input_proacronym">
                                     <h3>Does your project have a cool acronym?</h3>
 								</label>
@@ -493,7 +494,30 @@
 									onfocus='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1); elem1.forEach(e => e.classList.add("border-highlight")); set_scrollbar_marker( scroll_marker,elem1 )'
 									onfocusout='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1);elem1.forEach(e => e.classList.remove("border-highlight")); document.querySelectorAll("[name=\"scroll-bar-span\"]").forEach(e => {e.remove()})'
 								/>
-							</form>
+							</form>   
+			-->
+<!-- Acronym Checkbox -->
+							<form class="" style="margin-left: 0px;" id="form_proacronym">
+								    <h3>Does your project have a cool acronym?</h3>
+									<div class="form-data_type form-check">
+									<input class="form-check-input checkbox_3" type="checkbox" value="10" id="check_proacronym" />
+									<label class="form-check-label" for="check_proacronym">
+									
+									<input
+										style="width: 24vw;"
+										type="text"
+										class="col-auto"
+										id="input_proacronym"
+										onfocusin="this.select();"
+										onchange="onchange_replace(this);"
+										name="$_PROACRONYM"
+										onchange= ' saved_a["replace"]["$_PROACRONYM"]= this.value '
+										placeholder="Cool Acronym"
+										onkeydown="if (event.keyCode == 13){event.preventDefault(); event.stopPropagation();this.parentElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.children[0].focus();return false;}"
+										/>
+									</label>
+								</div>
+							</form>	
 
 							<form id="form_studyobject">
 								<label for="input_studyobject">
@@ -1284,11 +1308,11 @@
 							<br />
 							<table  >
 								<tr>
-									<td><h3>Action Number: </h3></td>
+									<td><h3>Funding No.: </h3></td>
 									<td><h3>  $_PROJECT</h3></td>
 								</tr>
 								<tr>
-									<td><h3>Action Acronym:</h3></td>
+									<td><h3>Project Acronym:</h3></td>
 									<td><h3>  $_PROACRONYM</h3></td>
 								</tr>
 								<tr>
@@ -1302,7 +1326,6 @@
 
 								</tr>
 							</table>
-
 							</div>
 							<br />
 
@@ -1759,11 +1782,11 @@
 							<br>
 							<table>
 								<tbody><tr>
-									<td><h3>Action Number: </h3></td>
+									<td><h3>Funding No.: </h3></td>
 									<td><h3>  $_PROJECT</h3></td>
 								</tr>
 								<tr>
-									<td><h3>Action Acronym:</h3></td>
+									<td><h3>Project Acronym:</h3></td>
 									<td><h3>  $_PROACRONYM</h3></td>
 								</tr>
 								<tr>
