@@ -138,12 +138,6 @@
 									<button id="clear_cache" class="dropdown-item" onclick="window.localStorage.clear();document.location.reload()">Restore Default (Clear Input)</button>
 								</li>
 								<li>
-									<label for="image_upload" class="form-label dropdown-item">
-										Upload Frontpage Image
-										<input class="form-control d-none" type="file" id="image_upload" onchange="upload_image()" />
-									</label>
-								</li>
-								<li>
 									<button id="copy_doc" class="dropdown-item" onclick="copy_doc()">Copy Text</button>
 									<button id="test" class="d-none dropdown-item" onclick="test()">Debug Test</button>
 									<button id="json_save" class="dropdown-item" onclick="save_json()">Export JSON</button>
@@ -213,12 +207,6 @@
 								</li>
 								<li>
 					
-								</li>
-								<li>
-									<label for="image_upload" class="form-label dropdown-item">
-										Upload Frontpage Image
-										<input class="form-control d-none" type="file" id="image_upload_menu" onchange="upload_image()" />
-									</label>
 								</li>
 								<li>
 									<button id="load_from_cache" class="dropdown-item" >Load from Cache &raquo;</button>
@@ -1317,7 +1305,6 @@
 					<div class="content-page">
 						<br />
 						<div class="p-2" id="vis-parent" style="margin: auto;">
-							<div id="vis" style="width: 35vw; height: 500px; margin: auto; display: block;"></div>
                             <br />
 						<div class="p-2" style="margin: auto;">
 							
@@ -1788,11 +1775,7 @@
                 <div id="horizon_europe" class="d-none content-page">
 					<div class="content-page">
 						<br>
-						<div class="p-2" id="vis-parent" style="margin: auto;">
-							<div id="vis" style="width: 35vw; height:500px; margin: auto;">
-                        
-                    </div>
-						</div>
+						<div class="p-2" id="vis-parent" style="margin: auto;">	</div>
 						<div class="p-2" style="margin: auto;">
 							
 							
