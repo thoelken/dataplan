@@ -509,7 +509,7 @@
 
 <!-- Funding No. Checkbox -->
 							<form class="" style="margin-left: 0px;" id="form_fundingno">
-								    <h3>Does your project have a cool acronym?</h3>
+								    <h3>Does your project already have funding no.?</h3>
 									<div class="form-data_type form-check">
 									<input class="form-check-input checkbox_3" type="checkbox" value="10" id="check_fundingno" />
 									<label class="form-check-label" for="check_fundingno">
@@ -612,16 +612,16 @@
 							</form>
 
                     <!--    <br><h3>1.3 Other DMP Metadata</h3> -->
-							<form class="" style="margin-left: 0px;" id="form_username">
-								<label for="input_username"><h4>User Name:</h4></label>
+							<form class="" style="margin-left: 0px;" id="form_authorname">
+								<label for="input_authorname"><h4>Author Name:</h4></label>
 								<input
 									style="width: 26vw;"
 									class=""
 									onfocusin="this.select();"
 									onchange="onchange_replace(this);"
 									type="text"
-									id="input_username"
-									name="$_USERNAME"
+									id="input_authorname"
+									name="$_AUTHORNAME"
 									placeholder="type your name here"
 									onkeydown=" if (event.keyCode == 13){event.preventDefault(); event.stopPropagation();this.parentElement.nextElementSibling.children[1].focus();return false;}"
 									onfocus='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1); elem1.forEach(e => e.classList.add("border-highlight")); set_scrollbar_marker( scroll_marker,elem1 )'
@@ -629,16 +629,16 @@
 								/>
 							</form>
 
-							<form class="" style="margin-left: 0px;" id="form_email">
-								<label for="input_email"><h4>User Email:</h4></label>
+							<form class="" style="margin-left: 0px;" id="form_authorcontact">
+								<label for="input_authorcontact"><h4>Author contact details:</h4></label>
 								<input
 									style="width: 26vw;"
 									class=""
 									onfocusin="this.select();"
 									onchange="onchange_replace(this);"
 									type="text"
-									id="input_email"
-									name="$_EMAIL"
+									id="input_authorcontact"
+									name="$_AUTHORCONTACT"
 									placeholder="user email address"
 									onkeydown=" if (event.keyCode == 13){event.preventDefault(); event.stopPropagation();this.parentElement.nextElementSibling.children[1].focus();return false;}"
 									onfocus='const name1 = this.name.split("_")[1]+"-to-";const elem1 = document.getElementsByName(name1); elem1.forEach(e => e.classList.add("border-highlight")); set_scrollbar_marker( scroll_marker,elem1 )'
@@ -1326,6 +1326,14 @@
 									<td><h3>  $_PROACRONYM</h3></td>
 								</tr>
 								<tr>
+									<td><h3>Author:</h3></td>
+									<td><h3>  $_AUTHORNAME</h3></td>
+								</tr>
+								<tr>
+									<td><h3>Author Contact:</h3></td>
+									<td><h3>  $_AUTHORCONTACT</h3></td>
+								</tr>
+								<tr>
 									<td><h3>Date:</h3></td>
 									<td id="today_date" ><h3></h3></td>
 
@@ -1794,6 +1802,14 @@
 								<tr>
 									<td><h3>Project Acronym:</h3></td>
 									<td><h3>  $_PROACRONYM</h3></td>
+								</tr>
+								<tr>
+									<td><h3>Author:</h3></td>
+									<td><h3>  $_AUTHORNAME</h3></td>
+								</tr>
+								<tr>
+									<td><h3>Author Contact:</h3></td>
+									<td><h3>  $_AUTHORCONTACT</h3></td>
 								</tr>
 								<tr>
 									<td><h3>Date:</h3></td>
@@ -5353,7 +5369,7 @@
                             <p class="c0"><span class="c1">F&ouml;rderprogramm: </span></p>
                             <p class="c0"><span class="c1">FKZ: </span></p>
                             <p class="c0"><span class="c1">Prim&auml;rforscher/Wissenschaftler: </span></p>
-                            <p class="c0"><span class="c1">ID Prim&auml;rforscher/Wissenschaftler: $_USERNAME</span></p>
+                            <p class="c0"><span class="c1">ID Prim&auml;rforscher/Wissenschaftler: $_AUTHORNAME</span></p>
                             <p class="c0"><span class="c1">Kontaktperson Datenmanagement: $_DATAOFFICER</span></p>
                             <p class="c0"><span class="c1">ID Kontaktperson Datenmanagement: </span></p>
                             <p class="c0"><span class="c1">Kontakt: $_DOCONTACT</span></p>
@@ -5513,10 +5529,10 @@
 			        "$_STUDYOBJECT": "Example Topic",
 			        "$_PROJECTAIM": "Example Aim",
 					"$_DMPVERSION": "0.0",
-			        "$_USERNAME": "Example User",
-			        "$_EMAIL": "email",
-			        "$_dataofficer": "Example data officer name",
-			        "$_docontact": "Data Officer Contact Details",
+			        "$_AUTHORNAME": "Please enter the author's name",
+			        "$_AUTHORCONTACT": "Please enter the author's email address/phone no.",
+			        "$_dataofficer": "Please enter the data officer's name",
+			        "$_docontact": "Please enter the data officer's email address/phone no.",
 					"$_DATAUTILITY": "Industry, politicians and students can also use the data for different purposes.",
 			        "$_UPDATEMONTH": "Example Month",
 			        "$_PREVIOUSPROJECTS": "Previous Project Name",
@@ -5686,10 +5702,10 @@
 			        "$_STUDYOBJECT": "Example Topic",
 			        "$_PROJECTAIM": "Example Aim",
 					"$_DMPVERSION": "1.0",
-			        "$_USERNAME": "Example User",
-			        "$_EMAIL": "email",
-			        "$_dataofficer": "Example data officer name",
-			        "$_docontact": "Data Officer Contact Details",
+			        "$_AUTHORNAME": "Please enter the author's name",
+			        "$_AUTHORCONTACT": "Please enter the author's email address/phone no.",
+			        "$_dataofficer": "Please enter the data officer's name",
+			        "$_docontact": "Please enter the data officer's email address/phone no.",
 					"$_DATAUTILITY": "Industry, politicians and students can also use the data for different purposes.",
 			        "$_UPDATEMONTH": "Example Month",
 			        "$_PREVIOUSPROJECTS": "Previous Project Name",
@@ -5856,8 +5872,8 @@
 				
 				// update dmp meta data
 				saved_a["dmp"]["title"] = "DMP of "+ saved_a["replace"]["$_PROJECT"];
-				saved_a["dmp"]["contact"]["name"] = "DMP of "+ saved_a["replace"]["$_USERNAME"];
-				saved_a["dmp"]["contact"]["mbox"] = "DMP of "+ saved_a["replace"]["$_EMAIL"];
+				saved_a["dmp"]["contact"]["name"] = "DMP of "+ saved_a["replace"]["$_AUTHORNAME"];
+				saved_a["dmp"]["contact"]["mbox"] = "DMP of "+ saved_a["replace"]["$_AUTHORCONTACT"];
 				saved_a["dmp"]["created"] == "2018-07-23T10:10:23.6" ? saved_a["dmp"]["created"] = date.toISOString().slice(0,-3): {};
 				saved_a["dmp"]["modified"] = date.toISOString().slice(0,-3);
 				saved_a["dmp"]["submission"]  = date.toISOString().slice(0,-3);
